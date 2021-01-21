@@ -12,7 +12,9 @@ services:
             - FLASK_APP=/code/run.py
         command: uwsgi --ini /code/flask/app.ini
         ports:
-            - "8081:5000"   
+            - "8081:5000" 
+        sysctls:
+            - net.core.somaxconn=1024  
 #         networks: 
 #             my-network:
 #                 aliases:
