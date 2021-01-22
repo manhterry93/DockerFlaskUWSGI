@@ -14,7 +14,7 @@ services:
         ports:
             - "8081:5000" 
         sysctls:
-            - net.core.somaxconn=1024  
+            - net.core.somaxconn=4096  
 #         networks: 
 #             my-network:
 #                 aliases:
